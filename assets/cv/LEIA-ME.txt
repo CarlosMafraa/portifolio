@@ -1,0 +1,7 @@
+Coloque aqui seu currículo em PDF com o nome:
+
+    carlos-fabiano-mafra-cv.pdf
+
+O botão "Baixar CV" em index.html aponta para assets/cv/carlos-fabiano-mafra-cv.pdf.
+Se usar outro nome, ajuste o href do link no index.html (hero e/ou contato).
+Pode apagar este arquivo depois.

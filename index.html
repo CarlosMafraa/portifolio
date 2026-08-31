@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Carlos Mafra — Desenvolvedor Full Stack em Manaus</title>
+<meta name="description" content="Portfólio de Carlos Fabiano Gomes Mafra, desenvolvedor full stack em Manaus (AM). Angular e TypeScript no front; Spring Boot (Java/Kotlin) e FastAPI (Python) no back; testes com Playwright e K6.">
+<meta name="author" content="Carlos Fabiano Gomes Mafra">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfa">
+
+<!-- Ajuste a URL abaixo se o repositório mudar de nome ou usar domínio próprio -->
+<link rel="canonical" href="https://carlosmafraa.github.io/portifolio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Carlos Mafra">
+<meta property="og:title" content="Carlos Mafra — Desenvolvedor Full Stack em Manaus">
+<meta property="og:description" content="Angular e TypeScript no front; Spring Boot (Java/Kotlin) e FastAPI (Python) no back; testes com Playwright e K6. Vim da engenharia civil.">
+<meta property="og:url" content="https://carlosmafraa.github.io/portifolio/">
+<!-- Para melhor compatibilidade (WhatsApp/LinkedIn), exporte um PNG 1200x630 de og.svg e troque para og.png -->
+<meta property="og:image" content="https://carlosmafraa.github.io/portifolio/assets/img/og.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carlos Mafra — Desenvolvedor Full Stack">
+<meta name="twitter:description" content="Full stack em Manaus. As duas pontas: a tela e o que a sustenta.">
+<meta name="twitter:image" content="https://carlosmafraa.github.io/portifolio/assets/img/og.svg">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script>
+  /* Aplica o tema antes da primeira pintura, sem flash */
+  (function () {
+    try {
+      var t = localStorage.getItem('cm-theme');
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Carlos Fabiano Gomes Mafra",
+  "givenName": "Carlos",
+  "familyName": "Mafra",
+  "jobTitle": "Líder Técnico · Desenvolvedor Full Stack",
+  "email": "mailto:carlosfgmafra@gmail.com",
+  "url": "https://carlosmafraa.github.io/portifolio/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Manaus", "addressRegion": "AM", "addressCountry": "BR" },
+  "worksFor": { "@type": "Organization", "name": "Foxconn" },
+  "sameAs": [
+    "https://github.com/CarlosMafraa",
+    "https://www.linkedin.com/in/carlos-mafra-2a269a20a/"
+  ],
+  "knowsAbout": ["Angular", "TypeScript", "Spring Boot", "Java", "Kotlin", "Hibernate", "FastAPI", "Python", "PostgreSQL", "SQL Server", "WebSocket", "Playwright", "K6", "Docker", "GitLab CI/CD"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Instituto Federal do Amazonas (IFAM)" },
+    { "@type": "CollegeOrUniversity", "name": "Faculdade Martha Falcão (FMF/Wyden)" }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header" id="topo">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#topo" aria-label="Início — Carlos Mafra">
+      <svg class="brand__mark" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+        <rect width="10" height="10" fill="currentColor"></rect>
+        <rect x="12" width="10" height="10" fill="var(--accent)"></rect>
+        <rect y="12" width="10" height="10" fill="var(--accent)"></rect>
+        <rect x="12" y="12" width="10" height="10" fill="currentColor"></rect>
+      </svg>
+      <span class="brand__name">Carlos Mafra</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-primary" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav-primary" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#carreira">Carreira</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#formacao">Formação</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false">
+        <span class="theme-toggle__dot" aria-hidden="true"></span>
+        <span class="theme-toggle__label">Tema</span>
+      </button>
+      <a class="btn btn--solid" href="mailto:carlosfgmafra@gmail.com">Falar comigo <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <ul class="chips" aria-label="Resumo">
+        <li class="chip chip--live"><span class="chip__dot"></span>Desenvolvedor full stack</li>
+        <li class="chip"><span class="chip__dot chip__dot--dim"></span>Manaus &middot; AM &middot; BR</li>
+        <li class="chip"><span class="chip__dot chip__dot--fg"></span>Angular &middot; Spring Boot &middot; FastAPI</li>
+        <li class="chip"><span class="chip__dot chip__dot--ok"></span>Disponível para trabalho remoto</li>
+      </ul>
+
+      <h1 class="hero__title" id="hero-title">Desenvolvo as duas pontas: a tela e o que a sustenta.</h1>
+
+      <p class="hero__lead">
+        Desenvolvedor full stack em Manaus, hoje líder técnico de um time de 7. Angular e TypeScript no
+        front; Spring Boot (Java/Kotlin) e FastAPI (Python) no back; PostgreSQL, SQL Server e Firebase nos
+        dados. Um ano como SDET com Playwright e K6 me deixou com um vício: pensar em como o código falha em
+        produção antes de escrevê-lo. Vim da engenharia civil e trouxe dela a obsessão por carga, tolerância
+        e o que acontece quando uma peça cede.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--solid btn--lg" href="mailto:carlosfgmafra@gmail.com">carlosfgmafra@gmail.com <span aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost" href="https://github.com/CarlosMafraa" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/carlos-mafra-2a269a20a/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+        <!-- Coloque o arquivo em assets/cv/ com este nome, ou ajuste o href -->
+        <a class="btn btn--ghost" href="assets/cv/carlos-fabiano-mafra-cv.pdf" download>Baixar CV <span aria-hidden="true">&#8595;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTRICAS -->
+  <section class="metrics" aria-label="Números">
+    <div class="metrics__grid">
+      <div class="metric">
+        <p class="metric__value">4<span>+ anos</span></p>
+        <p class="metric__label">de experiência full stack, atuando de ponta a ponta desde 2022</p>
+      </div>
+      <div class="metric">
+        <p class="metric__value">7<span>pessoas</span></p>
+        <p class="metric__label">no time que ele lidera hoje na Foxconn: 5 devs, 1 QA e 1 analista de sistemas</p>
+      </div>
+      <div class="metric">
+        <p class="metric__value">1<span>ano</span></p>
+        <p class="metric__label">dedicado a automação de testes (SDET) com Playwright e K6</p>
+      </div>
+      <div class="metric">
+        <p class="metric__value">4<span>clientes</span></p>
+        <p class="metric__label">empresariais com código dele em produção no ERP Taurus</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section" id="sobre" aria-labelledby="sobre-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__idx">01</span>
+        <h2 class="section__kicker" id="sobre-title">Sobre</h2>
+        <span class="section__rule"></span>
+      </div>
+      <div class="prose-2col">
+        <p class="prose-lead">
+          Comecei na engenharia civil: bacharelado em Manaus entre 2015 e 2020, com o técnico em Construção
+          de Edifícios do IFAM no meio do caminho. Em 2022 troquei o canteiro pelo código, como estagiário
+          de desenvolvimento na Polícia Militar do Amazonas, e não voltei mais.
+        </p>
+        <p class="prose-dim">
+          Meu diferencial é ter passado pelos dois lados da entrega. Escrevi as features (Angular no front,
+          Spring Boot e FastAPI no back) e depois passei um ano como SDET, quebrando o sistema com Playwright
+          e K6 e medindo tudo em InfluxDB e Grafana. Isso mudou como eu escrevo: penso a tela, o contrato da
+          API, o modelo de dados e o teste como uma coisa só — e hoje lidero um time levando isso adiante.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARREIRA -->
+  <section class="section" id="carreira" aria-labelledby="carreira-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__idx">02</span>
+        <h2 class="section__kicker" id="carreira-title">Experiência profissional</h2>
+        <span class="section__rule"></span>
+      </div>
+      <p class="section__intro">
+        A carreira como um <em>trace</em>: cada cargo é um span com início e duração reais. Abra um span
+        para ver o detalhe.
+      </p>
+
+      <div class="trace">
+        <div class="trace__meta">
+          <span class="mono">carreira/cfgm-2022-2026</span>
+          <span class="pill"><span class="pill__dot pill__dot--dim"></span>51 meses</span>
+          <span class="pill"><span class="pill__dot pill__dot--ok"></span>5 spans</span>
+        </div>
+
+        <ol class="spans">
+          <li>
+            <details class="span" open>
+              <summary class="span__row">
+                <span class="span__title">Líder Técnico <em>Foxconn</em></span>
+                <span class="span__bar" style="--o:94.1%;--w:5.9%" aria-hidden="true"><i></i></span>
+                <span class="span__when mono">05/2026 &rarr; atual</span>
+              </summary>
+              <div class="span__body">
+                <ul>
+                  <li>Lidera um time de 7 pessoas (5 devs, 1 QA e 1 analista de sistemas) em Scrum, apoiando decisões de arquitetura e conduzindo code reviews.</li>
+                  <li>Conduz o desenvolvimento de um sistema de gestão de changeover (troca de linha de produção) distribuído em vários repositórios &mdash; backend, frontend, integração e WhatsApp/WAHA &mdash; com Spring Boot, Hibernate/JPA, Angular, SQL Server e Docker.</li>
+                  <li>Deu visibilidade a gargalos que antes passavam batido: o sistema monitora mais de 60 atividades por changeover e dispara alerta automático via WhatsApp (WAHA) quando o tempo previsto de uma atividade estoura.</li>
+                  <li>Atua em CI/CD no GitLab com deploy semi-automatizado e testes integrados ao pipeline; faz a ponte entre stakeholders de negócio e o time, com mentoria diária (pair programming).</li>
+                </ul>
+                <p class="span__tech mono">Spring Boot &middot; Hibernate/JPA &middot; Angular &middot; SQL Server &middot; Docker &middot; GitLab CI/CD &middot; WAHA</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="span">
+              <summary class="span__row">
+                <span class="span__title">Analista de Testes / SDET <em>Foxconn</em></span>
+                <span class="span__bar" style="--o:70.6%;--w:23.5%" aria-hidden="true"><i></i></span>
+                <span class="span__when mono">05/2025 &rarr; 05/2026</span>
+              </summary>
+              <div class="span__body">
+                <ul>
+                  <li>Estruturou a automação de testes do zero de um sistema corporativo em desenvolvimento: cerca de 10 cenários E2E críticos em Playwright/TypeScript com Page Object Model.</li>
+                  <li>Reduziu a validação de cada fluxo de aprox. 2&ndash;3 min manuais para aprox. 20s na UI e 3s na API, automatizando também fluxos encadeados no Postman.</li>
+                  <li>Testes de carga com K6 revelaram uma VM de teste subdimensionada (aprox. 30% de timeouts em requisições sequenciadas), antecipando o problema antes de produção.</li>
+                  <li>Dashboards de qualidade em Grafana e InfluxDB, ambientes containerizados com Docker e evidências centralizadas em XWiki, tudo integrado ao CI/CD.</li>
+                </ul>
+                <p class="span__tech mono">Playwright &middot; K6 &middot; TypeScript &middot; Grafana &middot; InfluxDB &middot; Docker &middot; XWiki &middot; Postman</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="span">
+              <summary class="span__row">
+                <span class="span__title">Desenvolvedor Full-Stack <em>Projex Consulting</em></span>
+                <span class="span__bar" style="--o:41.2%;--w:29.4%" aria-hidden="true"><i></i></span>
+                <span class="span__when mono">02/2024 &rarr; 05/2025</span>
+              </summary>
+              <div class="span__body">
+                <ul>
+                  <li>Desenvolveu módulos do Taurus, produto em produção para 4 clientes empresariais: módulo de compras (compara descontos por produto e por combo e aponta a opção mais vantajosa) e módulo de estoque.</li>
+                  <li>Colocou em produção a exibição de fotos de ordens de serviço: um carrossel em CSS puro com pausa, rotação de imagens em paisagem e transições com sensação de profundidade, conforme spec do cliente.</li>
+                  <li>Construiu uma aplicação de leilão com lances em tempo real via WebSocket e Spring Boot, refletindo cada lance instantaneamente para todos os participantes conectados.</li>
+                  <li>Front em Angular, PrimeNG e PrimeFlex; back em FastAPI (Python) e Spring Boot (Java/Kotlin) com Hibernate/JPA sobre PostgreSQL. Kanban, code reviews e versionamento no Bitbucket.</li>
+                </ul>
+                <p class="span__tech mono">Angular &middot; PrimeNG &middot; PrimeFlex &middot; Spring Boot &middot; Kotlin &middot; FastAPI &middot; Hibernate/JPA &middot; PostgreSQL &middot; WebSocket</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="span">
+              <summary class="span__row">
+                <span class="span__title">Desenvolvedor &middot; Estágio <em>Projex Consulting</em></span>
+                <span class="span__bar" style="--o:39.2%;--w:2%" aria-hidden="true"><i></i></span>
+                <span class="span__when mono">01/2024 &rarr; 02/2024</span>
+              </summary>
+              <div class="span__body">
+                <ul>
+                  <li>Construiu um dashboard interativo em Angular, TypeScript e Chart.js (dados mockados).</li>
+                  <li>A qualidade da entrega levou à efetivação como desenvolvedor em cerca de 20 dias. Ambiente ágil (Scrum/Kanban), entregas incrementais.</li>
+                </ul>
+                <p class="span__tech mono">Angular &middot; TypeScript &middot; Chart.js</p>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="span">
+              <summary class="span__row">
+                <span class="span__title">Desenvolvedor &middot; Estágio <em>Polícia Militar do Amazonas</em></span>
+                <span class="span__bar" style="--o:0%;--w:41.2%" aria-hidden="true"><i></i></span>
+                <span class="span__when mono">05/2022 &rarr; 02/2024</span>
+              </summary>
+              <div class="span__body">
+                <ul>
+                  <li>Sistema de cadastro e habilitação de empresas fornecedoras de fardamento, com fluxo de aprovação, em Angular com Firebase como backend completo (autenticação, banco NoSQL e storage) &mdash; em uso real, com suporte direto aos fornecedores.</li>
+                  <li>Evolução do front (Angular) e consultas de backend de um sistema de controle de armamento em produção, com mais de 5.000 armas registradas.</li>
+                  <li>Sistema de checklist para conferência de patrimônio da corporação (viaturas, lanchas e equipamentos) e um sistema de boletim em Spring Boot, Hibernate/JPA e PostgreSQL com APIs REST documentadas em Swagger.</li>
+                  <li>Sempre em equipe, com metodologia Kanban e versionamento no GitHub.</li>
+                </ul>
+                <p class="span__tech mono">Angular &middot; Firebase &middot; Spring Boot &middot; Hibernate/JPA &middot; PostgreSQL &middot; Swagger &middot; Git</p>
+              </div>
+            </details>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section" id="habilidades" aria-labelledby="habilidades-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__idx">03</span>
+        <h2 class="section__kicker" id="habilidades-title">Mapa de habilidades</h2>
+        <span class="section__rule"></span>
+      </div>
+      <p class="section__intro">
+        Três níveis: <strong>domínio</strong> &rarr; <strong>tecnologia</strong> &rarr;
+        <strong>ferramenta / prática</strong>. Use os botões pra abrir nível a nível, ou clique
+        direto num nó; arraste pra mover e a roda pra dar zoom.
+      </p>
+
+      <div class="skillmap-ctrl" role="group" aria-label="Nível de detalhe do mapa">
+        <button type="button" data-mm-level="1">Nível 1</button>
+        <button type="button" data-mm-level="2" aria-pressed="true">Nível 2</button>
+        <button type="button" data-mm-level="99">Tudo</button>
+        <button type="button" data-mm-fit>Ajustar</button>
+      </div>
+
+      <div class="skillmap" role="img" aria-label="Mapa mental de habilidades: frontend, backend, dados, APIs e arquitetura, testes, DevOps, observabilidade e liderança">
+        <script type="text/template">
+# Carlos Mafra · Full Stack
+
+## Frontend
+### Angular
+- TypeScript
+- PrimeNG
+- PrimeFlex
+- Chart.js
+### Base web
+- HTML
+- CSS
+
+## Backend
+### Spring Boot
+- Java
+- Kotlin
+- Hibernate/JPA
+- Swagger/OpenAPI
+### FastAPI
+- Python
+- Swagger/OpenAPI
+
+## Dados
+### PostgreSQL
+### SQL Server
+### Firebase
+
+## APIs & arquitetura
+### REST
+### WebSocket
+### Clean Code
+### SOLID
+### Arquitetura modular
+
+## Testes & qualidade
+### Playwright
+- E2E
+- Page Object Model
+### K6
+- Carga
+- Performance
+### Postman
+
+## DevOps
+### Git
+- GitHub
+- GitLab
+- Bitbucket
+### Docker
+### CI/CD
+- GitLab Pipelines
+
+## Observabilidade & docs
+### Grafana
+### InfluxDB
+### XWiki
+### WAHA
+- Integração WhatsApp
+
+## Métodos & liderança
+### Scrum
+### Kanban
+### Code Review
+### Mentoria
+- Pair programming
+        </script>
+      </div>
+
+      <noscript>
+        <div class="skills">
+          <article class="skills__group">
+            <h3>Frontend</h3>
+            <dl>
+              <div><dt>Angular</dt><dd>TypeScript, PrimeNG, PrimeFlex, Chart.js</dd></div>
+              <div><dt>Base web</dt><dd>HTML, CSS</dd></div>
+            </dl>
+          </article>
+          <article class="skills__group">
+            <h3>Backend</h3>
+            <dl>
+              <div><dt>Spring Boot</dt><dd>Java, Kotlin, Hibernate/JPA, Swagger/OpenAPI</dd></div>
+              <div><dt>FastAPI</dt><dd>Python, Swagger/OpenAPI</dd></div>
+            </dl>
+          </article>
+          <article class="skills__group">
+            <h3>Dados</h3>
+            <dl>
+              <div><dt>PostgreSQL</dt><dd>modelagem, consultas, persistência</dd></div>
+              <div><dt>SQL Server</dt><dd>sistema de changeover</dd></div>
+              <div><dt>Firebase</dt><dd>auth, NoSQL, storage</dd></div>
+            </dl>
+          </article>
+          <article class="skills__group">
+            <h3>APIs &amp; arquitetura</h3>
+            <dl>
+              <div><dt>REST + WebSocket</dt><dd>tempo real, Swagger/OpenAPI</dd></div>
+              <div><dt>Clean Code / SOLID</dt><dd>modular, desacoplado</dd></div>
+            </dl>
+          </article>
+          <article class="skills__group">
+            <h3>Testes &amp; qualidade</h3>
+            <dl>
+              <div><dt>Playwright</dt><dd>E2E, Page Object Model, TypeScript</dd></div>
+              <div><dt>K6</dt><dd>carga e performance</dd></div>
+              <div><dt>Postman</dt><dd>fluxos de API encadeados</dd></div>
+            </dl>
+          </article>
+          <article class="skills__group">
+            <h3>DevOps</h3>
+            <dl>
+              <div><dt>Git</dt><dd>GitHub, GitLab, Bitbucket</dd></div>
+              <div><dt>Docker</dt><dd>ambientes padronizados</dd></div>
+              <div><dt>CI/CD</dt><dd>GitLab Pipelines</dd></div>
+            </dl>
+          </article>
+          <article class="skills__group">
+            <h3>Observabilidade &amp; docs</h3>
+            <dl>
+              <div><dt>Grafana + InfluxDB</dt><dd>dashboards de qualidade</dd></div>
+              <div><dt>XWiki</dt><dd>documentação e evidências</dd></div>
+              <div><dt>WAHA</dt><dd>integração WhatsApp</dd></div>
+            </dl>
+          </article>
+          <article class="skills__group">
+            <h3>Métodos &amp; liderança</h3>
+            <dl>
+              <div><dt>Scrum / Kanban</dt><dd>time de 7</dd></div>
+              <div><dt>Code Review</dt><dd>padrões de qualidade</dd></div>
+              <div><dt>Mentoria</dt><dd>pair programming</dd></div>
+            </dl>
+          </article>
+        </div>
+      </noscript>
+
+      <div class="practices">
+        <article class="practice">
+          <div class="practice__head"><h3>Base de engenharia</h3><span class="pill"><span class="pill__dot pill__dot--ok"></span>Aplicado</span></div>
+          <ul>
+            <li>Clean Code <span>desacoplamento</span></li>
+            <li>SOLID <span>code review</span></li>
+            <li>Orientação a Objetos <span>base</span></li>
+            <li>Page Object Model <span>testes E2E</span></li>
+          </ul>
+        </article>
+        <article class="practice">
+          <div class="practice__head"><h3>Arquitetura &amp; entrega</h3><span class="pill"><span class="pill__dot pill__dot--ok"></span>Ativo</span></div>
+          <ul>
+            <li>REST + WebSocket <span>contratos</span></li>
+            <li>Swagger/OpenAPI <span>documentação</span></li>
+            <li>CI/CD GitLab <span>deploy</span></li>
+            <li>Scrum / Kanban <span>time de 7</span></li>
+          </ul>
+        </article>
+        <article class="practice">
+          <div class="practice__head"><h3>Cursos</h3><span class="pill"><span class="pill__dot pill__dot--dim"></span>Complementares</span></div>
+          <ul>
+            <li>Desenvolvimento Web &middot; JS, TS e Angular</li>
+            <li>Introdução a Python para Ciência de Dados</li>
+            <li>Princípios de Machine Learning &middot; Python</li>
+            <li>Java e Orientação a Objetos</li>
+            <li>Fundamentos de Ethical Hacking</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="section" id="projetos" aria-labelledby="projetos-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__idx">04</span>
+        <h2 class="section__kicker" id="projetos-title">Projetos em destaque</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <article class="project">
+        <p class="project__num">01</p>
+        <div class="project__main">
+          <h3>Sistema de gestão de changeover</h3>
+          <p class="project__tag mono">Foxconn &middot; 2026 &middot; Líder Técnico</p>
+          <p class="project__desc">Sistema distribuído em vários repositórios (backend, frontend, integração e WhatsApp/WAHA) para gerir a troca de linha de produção, com Spring Boot, Hibernate/JPA, Angular, SQL Server e Docker. Deploy semi-automatizado em pipeline GitLab.</p>
+        </div>
+        <div class="project__side">
+          <span class="pill"><span class="pill__dot pill__dot--ok"></span>Impacto</span>
+          <p>Monitora mais de 60 atividades por changeover e alerta o time via WhatsApp assim que o tempo previsto de uma atividade estoura &mdash; gargalo que antes passava despercebido.</p>
+          <p class="mono project__stack">Spring Boot &middot; Hibernate/JPA &middot; Angular &middot; SQL Server &middot; Docker &middot; GitLab CI/CD &middot; WAHA</p>
+          <p class="mono project__priv">Código privado</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <p class="project__num">02</p>
+        <div class="project__main">
+          <h3>Automação de testes E2E e de carga</h3>
+          <p class="project__tag mono">Foxconn &middot; 2025 &rarr; 2026 &middot; Analista de Testes / SDET</p>
+          <p class="project__desc">Suíte criada do zero para um sistema corporativo: cerca de 10 cenários E2E críticos em Playwright/TypeScript com Page Object Model, carga com K6, dashboards em Grafana/InfluxDB e ambientes containerizados com Docker, tudo integrado ao CI/CD.</p>
+        </div>
+        <div class="project__side">
+          <span class="pill"><span class="pill__dot pill__dot--ok"></span>Impacto</span>
+          <p>Validação de fluxo caiu de aprox. 2&ndash;3 min manuais para aprox. 20s na UI e 3s na API; a carga com K6 expôs uma VM subdimensionada (aprox. 30% de timeouts) antes de chegar em produção.</p>
+          <p class="mono project__stack">Playwright &middot; K6 &middot; TypeScript &middot; Grafana &middot; InfluxDB &middot; Docker &middot; XWiki &middot; Postman</p>
+          <p class="mono project__priv">Código privado</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <p class="project__num">03</p>
+        <div class="project__main">
+          <h3>Taurus &mdash; módulos de compras e estoque</h3>
+          <p class="project__tag mono">Projex Consulting &middot; 2024 &rarr; 2025 &middot; Desenvolvedor Full-Stack</p>
+          <p class="project__desc">Módulos de um ERP em produção para 4 clientes empresariais. O módulo de compras compara descontos por produto e por combo e aponta a opção mais vantajosa; inclui carrossel de fotos de ordens de serviço em CSS puro e uma aplicação de leilão em tempo real via WebSocket.</p>
+        </div>
+        <div class="project__side">
+          <span class="pill"><span class="pill__dot pill__dot--ok"></span>Impacto</span>
+          <p>Código em produção para clientes empresariais, com decisão de compra assistida e atualização de lances instantânea para todos os participantes conectados.</p>
+          <p class="mono project__stack">Angular &middot; PrimeNG &middot; PrimeFlex &middot; Spring Boot &middot; Kotlin &middot; FastAPI &middot; Hibernate/JPA &middot; PostgreSQL &middot; WebSocket</p>
+          <p class="mono project__priv">Código privado</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <p class="project__num">04</p>
+        <div class="project__main">
+          <h3>Sistemas internos da PMAM</h3>
+          <p class="project__tag mono">Polícia Militar do Amazonas &middot; 2022 &rarr; 2024 &middot; Estágio</p>
+          <p class="project__desc">Cadastro e habilitação de fornecedores de fardamento (Angular com Firebase como backend completo), evolução do front de um sistema de controle de armamento em produção, checklist de conferência de patrimônio e um sistema de boletim em Spring Boot, Hibernate/JPA e PostgreSQL.</p>
+        </div>
+        <div class="project__side">
+          <span class="pill"><span class="pill__dot pill__dot--ok"></span>Impacto</span>
+          <p>Sistemas em uso real na corporação &mdash; o de controle de armamento com mais de 5.000 armas registradas.</p>
+          <p class="mono project__stack">Angular &middot; Firebase &middot; Spring Boot &middot; Hibernate/JPA &middot; PostgreSQL &middot; Swagger &middot; Git</p>
+          <p class="mono project__priv">Código privado</p>
+        </div>
+      </article>
+
+      <div class="repos">
+        <p class="repos__label mono">Código aberto no GitHub</p>
+        <ul>
+          <li><a href="https://github.com/CarlosMafraa/API_RESTFUL" target="_blank" rel="noopener"><strong>API_RESTFUL</strong><span>JavaScript</span></a></li>
+          <li><a href="https://github.com/CarlosMafraa/EasyWarehouse" target="_blank" rel="noopener"><strong>EasyWarehouse</strong><span>TypeScript</span></a></li>
+          <li><a href="https://github.com/CarlosMafraa/DashBoard" target="_blank" rel="noopener"><strong>DashBoard</strong><span>TypeScript</span></a></li>
+          <li><a href="https://github.com/CarlosMafraa/JAVA_RMI" target="_blank" rel="noopener"><strong>JAVA_RMI</strong><span>Java</span></a></li>
+          <li><a href="https://github.com/CarlosMafraa/AvaliaTcc" target="_blank" rel="noopener"><strong>AvaliaTcc</strong><span>Projeto acadêmico</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAÇÃO -->
+  <section class="section" id="formacao" aria-labelledby="formacao-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__idx">05</span>
+        <h2 class="section__kicker" id="formacao-title">Formação acadêmica</h2>
+        <span class="section__rule"></span>
+      </div>
+      <ul class="edu">
+        <li>
+          <span class="edu__when mono">2021 &rarr; 2026</span>
+          <span class="edu__what"><strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong><span class="mono">Instituto Federal do Amazonas &middot; IFAM</span></span>
+          <span class="pill"><span class="pill__dot pill__dot--ok"></span>Em andamento</span>
+        </li>
+        <li>
+          <span class="edu__when mono">2015 &rarr; 2020</span>
+          <span class="edu__what"><strong>Bacharelado em Engenharia Civil</strong><span class="mono">Faculdade Martha Falcão &middot; FMF/Wyden</span></span>
+          <span class="pill"><span class="pill__dot pill__dot--dim"></span>Concluído</span>
+        </li>
+        <li>
+          <span class="edu__when mono">2016 &rarr; 2018</span>
+          <span class="edu__what"><strong>Técnico em Construção de Edifícios</strong><span class="mono">Instituto Federal do Amazonas &middot; IFAM</span></span>
+          <span class="pill"><span class="pill__dot pill__dot--dim"></span>Concluído</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section section--contato" id="contato" aria-labelledby="contato-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__idx">06</span>
+        <h2 class="section__kicker" id="contato-title">Contato</h2>
+        <span class="section__rule"></span>
+      </div>
+      <h3 class="contato__title">Aberto a conversas sobre desenvolvimento full stack, arquitetura e qualidade de software.</h3>
+      <div class="contato__actions">
+        <a class="btn btn--solid btn--lg" href="mailto:carlosfgmafra@gmail.com">carlosfgmafra@gmail.com <span aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/carlos-mafra-2a269a20a/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn--ghost" href="tel:+5592985276297">(92) 9 8527-6297</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner mono">
+    <span>Carlos Fabiano Gomes Mafra &middot; Manaus &middot; AM &middot; BR</span>
+    <span class="site-footer__links">
+      <a href="https://github.com/CarlosMafraa" target="_blank" rel="noopener">GitHub &#8599;</a>
+      <a href="https://www.linkedin.com/in/carlos-mafra-2a269a20a/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      <a href="#topo">Topo &#8593;</a>
+    </span>
+  </div>
+</footer>
+
+<!-- Mapa mental de habilidades: d3 + markmap-view (sem autoloader, pra controlar os niveis).
+     Sem JS ou se o CDN cair, a lista dentro do bloco noscript acima mostra a mesma estrutura. -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
