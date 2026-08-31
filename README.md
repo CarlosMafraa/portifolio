@@ -11,10 +11,11 @@ index.html            página principal
 .nojekyll             pula o build Jekyll do GitHub Pages (deploy mais rápido, sem surpresas)
 assets/
   css/style.css       todo o estilo, com tema claro/escuro por variáveis
-  js/main.js          tema, menu mobile
+  js/main.js          tema, menu mobile, mapa mental (markmap)
   img/favicon.svg     ícone da aba
-  img/og.svg          imagem de compartilhamento (link preview)
-  cv/                 coloque aqui o carlos-fabiano-mafra-cv.pdf
+  img/og.svg          fonte do preview de link
+  img/og.png          preview de link 1200x630 (gerado de og.svg)
+  cv/                 carlos-fabiano-mafra-cv.pdf (botão "Baixar CV")
 design/               export original do Claude Design (ignorado no git)
 ```
 
@@ -36,17 +37,12 @@ no Pages. Se um dia usar domínio próprio ou renomear o repo para
 
 ## Antes de divulgar — pendências de conteúdo
 
-- [ ] **CV**: adicionar `assets/cv/carlos-fabiano-mafra-cv.pdf` (o botão "Baixar CV" já aponta pra lá).
-- [ ] **Imagem de link (og)**: `og.svg` funciona no Google, mas WhatsApp e LinkedIn
-      preferem **PNG 1200×630**. Exporte `assets/img/og.svg` como `og.png` e troque as
-      3 referências no `<head>` do `index.html`.
-- [ ] **URL canônica**: confirmar `carlosmafraa.github.io/portifolio/` no `<head>` do
-      `index.html` (`<link rel="canonical">` + tags Open Graph), ou trocar pelo domínio final.
-- [ ] **Disponibilidade / inglês**: ajustar os chips do hero ("Aberto a propostas · CLT / PJ")
-      e considerar um chip com seu nível de inglês.
-- [ ] **Impacto quantificado**: nas seções Carreira e Projetos, trocar frases genéricas
-      ("monitoramento contínuo", "decisões estratégicas") por números reais — cobertura
-      de testes %, RPS/latência no K6, tempo de regressão, nº de fluxos, usuários.
+- [x] **CV**: `assets/cv/carlos-fabiano-mafra-cv.pdf` no repo; botão "Baixar CV" funciona.
+- [x] **Imagem de link (og)**: `og.png` 1200×630 gerado de `og.svg`; `<head>` aponta pra ele.
+- [x] **URL canônica**: `carlosmafraa.github.io/portifolio/` no canonical, Open Graph e JSON-LD.
+- [ ] **Nível de inglês**: considerar um chip no hero com seu nível (o CV cita "trabalho remoto").
+- [ ] **Impacto quantificado**: já tem bastante número do CV; se surgir mais (cobertura de
+      testes %, RPS/latência no K6, nº de usuários), dá pra reforçar.
 - [ ] **GitHub**: a bio do perfil ainda diz "desenvolvedor web na Polícia Militar do
       Amazonas" — alinhar com o cargo atual. Caprichar nos READMEs de `EasyWarehouse`,
       `DashBoard` e `API_RESTFUL` (problema, stack, como rodar, o que faria diferente).
