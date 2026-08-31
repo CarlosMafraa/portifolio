@@ -43,9 +43,7 @@ no Pages. Se um dia usar domínio próprio ou renomear o repo para
 - [ ] **Nível de inglês**: considerar um chip no hero com seu nível (o CV cita "trabalho remoto").
 - [ ] **Impacto quantificado**: já tem bastante número do CV; se surgir mais (cobertura de
       testes %, RPS/latência no K6, nº de usuários), dá pra reforçar.
-- [ ] **GitHub**: a bio do perfil ainda diz "desenvolvedor web na Polícia Militar do
-      Amazonas" — alinhar com o cargo atual. Caprichar nos READMEs de `EasyWarehouse`,
-      `DashBoard` e `API_RESTFUL` (problema, stack, como rodar, o que faria diferente).
+- [x] **GitHub**: bio, empresa, pins e projetos de destaque do perfil atualizados; READMEs de `EasyWarehouse`, `DashBoard` e `API_RESTFUL` caprichados (descricao, stack, como rodar).
 - [ ] **Projetos**: se possível, publicar 1–2 projetos pessoais com deploy + repo público.
 
 ## Rodar localmente
