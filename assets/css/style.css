@@ -657,29 +657,6 @@ button { font: inherit; color: inherit; }
   .project__num { font-size: 34px; letter-spacing: -1.6px; line-height: 1; }
 }
 
-.repos { margin-top: 28px; border: 1px solid var(--ring); background: var(--card); padding: 20px 22px; }
-.repos__label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-.repos ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--hair); }
-.repos li { background: var(--card); }
-.repos li a {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 12px 14px;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--fg-2);
-}
-.repos li a:hover { background: var(--hover); color: var(--accent); }
-.repos li span { font-size: 11px; color: var(--dim); text-transform: uppercase; }
-
 /* ---------- formação ---------- */
 .edu li {
   display: grid;
@@ -700,7 +677,7 @@ button { font: inherit; color: inherit; }
 }
 
 /* ---------- contato ---------- */
-.section--contato {
+.section.section--contato {
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--ring);
